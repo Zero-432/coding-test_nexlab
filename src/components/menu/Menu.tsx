@@ -13,7 +13,7 @@ import avatar from '../../assets/img/avatar.jpg'
 
 function Menu() {
     return (
-        <div className="w-1/6 min-h-screen bg-gray-200">
+        <div className="w-1/6 bg-gray-200 max-[1280px]:hidden">
             <div className="flex flex-col items-center justify-center pt-10">
                 <div className="w-24 h-24">
                     <img
@@ -32,7 +32,7 @@ function Menu() {
                     </Link>
                 </div>
             </div>
-            <ul className="flex flex-col gap-10 mt-12 px-10 text-gray-600 font-medium">
+            <ul className="max-[1440px]:px-5 flex flex-col gap-10 mt-12 px-10 text-gray-600 font-medium">
                 <li>
                     <Link to="/properties">
                         <FontAwesomeIcon icon={faHome} />

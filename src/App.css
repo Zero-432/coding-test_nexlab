@@ -1,0 +1,31 @@
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(87, 196, 241);
+    background: linear-gradient(90deg, rgba(87, 196, 241, 1) 0%, rgba(179, 91, 241, 1) 52%, rgba(236, 126, 222, 1) 100%);
+}
+
+.wrapper {
+    border: 1px solid white;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    overflow: hidden;
+    background-color: white;
+}
+
+.open {
+    display: block !important;
+    position: fixed !important;
+    top: 0;
+    background-color: gray;
+    margin-left: -0.8rem;
+    height: 100%;
+    z-index: 9999;
+}
+
+.open input {
+    background-color: gray;
+}
