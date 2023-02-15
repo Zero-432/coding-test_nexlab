@@ -1,3 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+
+a,
+button {
+    cursor: revert;
+    text-decoration: none;
+}
+
+ol,
+ul,
+menu {
+    list-style: none;
+}
+
+ol,
+ul,
+menu {
+    list-style: none;
+}
+
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input,
+textarea {
+    -webkit-user-select: auto;
+    outline: none;
+}
+
+textarea {
+    white-space: revert;
+}
