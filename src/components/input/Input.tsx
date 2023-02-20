@@ -26,7 +26,7 @@ function Input() {
     const { addData } = useData()
 
     const { outsideRef, isComponentVisible, setIsComponentVisible } =
-        useOuterClick(false)
+        useOuterClick(true)
 
     const path = useLocation().pathname.split('/')[2]
 
