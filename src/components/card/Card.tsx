@@ -6,11 +6,12 @@ type ICard = {
     name: string
     datetime: string
     avatar: string
+    close: () => void
 }
 
-function Card({ message, url, name, datetime, avatar }: ICard) {
+function Card({ message, url, name, datetime, avatar, close }: ICard) {
     return (
-        <Link to={`/chat/${url}`}>
+        <Link to={`/chat/${url}`} onClick={close}>
             <div className="flex items-center justify-between gap-4 p-4 bg-slate-200 mb-4">
                 <img
                     src={avatar}

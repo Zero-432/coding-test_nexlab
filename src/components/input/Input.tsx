@@ -15,15 +15,18 @@ import {
 } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useData } from '../../contexts/DataContext'
+import useOuterClick from '../../hooks/useOuterClick'
 import { IUser } from '../../types/user.types'
 import Emoji from '../emoji/Emoji'
 
 function Input() {
     const inputRef = useRef<HTMLInputElement>(null)
     const [message, setMessage] = useState<string>('')
-    const [showEmoji, setShowEmoji] = useState<boolean>()
     const [cursorPosition, setCursorPosition] = useState<number>(0)
     const { addData } = useData()
+
+    const { outsideRef, isComponentVisible, setIsComponentVisible } =
+        useOuterClick(false)
 
     const path = useLocation().pathname.split('/')[2]
 
@@ -57,7 +60,7 @@ function Input() {
 
     const handleShowEmoji = () => {
         inputRef.current?.focus()
-        setShowEmoji(!showEmoji)
+        setIsComponentVisible(!isComponentVisible)
     }
 
     const handleSubmit = (e: MouseEvent<HTMLButtonElement>) => {
@@ -77,8 +80,12 @@ function Input() {
     }, [cursorPosition])
 
     return (
-        <div className="mt-2">
-            <div className={`absolute bottom-1/4 ${!showEmoji && 'hidden'}`}>
+        <div className="mt-2" ref={outsideRef}>
+            <div
+                className={`absolute bottom-1/4 ${
+                    isComponentVisible && 'hidden'
+                }`}
+            >
                 <Emoji pickEmoji={pickEmoji} />
             </div>
 

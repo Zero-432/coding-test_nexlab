@@ -60,6 +60,7 @@ function Chat() {
                             url="friend1"
                             datetime="02 Feb"
                             avatar={avatar}
+                            close={() => setOpen(false)}
                         />
                         <Card
                             message="welcome"
@@ -67,6 +68,7 @@ function Chat() {
                             url="friend2"
                             datetime="12 Jan"
                             avatar={avatar}
+                            close={() => setOpen(false)}
                         />
                         <Card
                             message="welcome"
@@ -74,6 +76,7 @@ function Chat() {
                             url="friend3"
                             datetime="21 Jun"
                             avatar={avatar}
+                            close={() => setOpen(false)}
                         />
                         <Card
                             message="welcome"
@@ -81,6 +84,7 @@ function Chat() {
                             url="friend4"
                             datetime="23 Dec"
                             avatar={avatar}
+                            close={() => setOpen(false)}
                         />
                         <Card
                             message="welcome"
@@ -88,6 +92,7 @@ function Chat() {
                             url="friend5"
                             datetime="19 Oct"
                             avatar={avatar}
+                            close={() => setOpen(false)}
                         />
                         <Card
                             message="welcome"
@@ -95,6 +100,7 @@ function Chat() {
                             url="friend6"
                             datetime="13 Jun"
                             avatar={avatar}
+                            close={() => setOpen(false)}
                         />
                         <Card
                             message="welcome"
@@ -102,6 +108,7 @@ function Chat() {
                             url="friend7"
                             datetime="28 Feb"
                             avatar={avatar}
+                            close={() => setOpen(false)}
                         />
                     </div>
                 </div>
