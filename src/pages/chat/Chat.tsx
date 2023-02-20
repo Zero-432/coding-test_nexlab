@@ -9,6 +9,7 @@ import { faBell } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Card from '../../components/card/Card'
 import Message from '../../components/message/Message'
+import avatar from '../../assets/img/avatar.jpg'
 
 function Chat() {
     const [open, setOpen] = useState<boolean>(false)
@@ -53,13 +54,55 @@ function Chat() {
                     </div>
                     <hr className="my-3 mx-0 border-gray-300 mr-5" />
                     <div className="h-2/3 scrollbar-thin scrollbar-thumb-gray-300 pr-5">
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
+                        <Card
+                            message="welcome"
+                            name="Friend 1"
+                            url="friend1"
+                            datetime="02 Feb"
+                            avatar={avatar}
+                        />
+                        <Card
+                            message="welcome"
+                            name="Friend 2"
+                            url="friend2"
+                            datetime="12 Jan"
+                            avatar={avatar}
+                        />
+                        <Card
+                            message="welcome"
+                            name="Friend 3"
+                            url="friend3"
+                            datetime="21 Jun"
+                            avatar={avatar}
+                        />
+                        <Card
+                            message="welcome"
+                            name="Friend 4"
+                            url="friend4"
+                            datetime="23 Dec"
+                            avatar={avatar}
+                        />
+                        <Card
+                            message="welcome"
+                            name="Friend 5"
+                            url="friend5"
+                            datetime="19 Oct"
+                            avatar={avatar}
+                        />
+                        <Card
+                            message="welcome"
+                            name="Friend 6"
+                            url="friend6"
+                            datetime="13 Jun"
+                            avatar={avatar}
+                        />
+                        <Card
+                            message="welcome"
+                            name="Friend 7"
+                            url="friend7"
+                            datetime="28 Feb"
+                            avatar={avatar}
+                        />
                     </div>
                 </div>
                 <div className="max-[768px]:w-full w-2/3">

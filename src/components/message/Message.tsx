@@ -1,10 +1,18 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import avatar from '../../assets/img/avatar.jpg'
 import { useData } from '../../contexts/DataContext'
 import { IUser } from '../../types/user.types'
 import Input from '../input/Input'
 
 function Message() {
-    const { data } = useData()
+    const path = useLocation().pathname.split('/')[2]
+    const { reloadData, data } = useData()
+
+    useEffect(() => {
+        reloadData(path)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [path])
 
     return (
         <div className="h-full relative">
